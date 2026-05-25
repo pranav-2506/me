@@ -61,7 +61,7 @@ export default function Hero({ scrollProgress }: HeroProps) {
             style={{ opacity: nameOpacity, y: nameY }}
             className="text-6xl sm:text-7xl font-medium tracking-tight mb-4 bg-gradient-to-br from-white via-[#eaeaea] to-[#888] bg-clip-text text-transparent"
           >
-            Pranav Chandar
+            Pranav Chandar Sridar
           </motion.h1>
 
           <motion.p

@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
 import Featured from "@/components/sections/Featured";
 import Philosophy from "@/components/sections/Philosophy";
 import Work from "@/components/sections/Work";
@@ -22,10 +23,11 @@ export default function Home() {
 
   const backgroundColor = useTransform(
     smoothProgress,
-    [0, 0.2, 0.35, 0.58, 0.6, 0.68, 0.84, 0.92, 1],
+    [0, 0.17, 0.21, 0.47, 0.64, 0.66, 0.72, 0.86, 0.94, 1],
     [
       "rgb(0, 0, 0)",
       "rgb(0, 0, 0)",
+      "rgb(245, 245, 245)",
       "rgb(245, 245, 245)",
       "rgb(245, 245, 245)",
       "rgb(40, 40, 40)",
@@ -46,6 +48,7 @@ export default function Home() {
       <div className="fixed inset-0 z-10 pointer-events-none">
         <div className="fixed inset-0 overflow-hidden">
           <Hero scrollProgress={smoothProgress} />
+          <About scrollProgress={smoothProgress} />
           <Featured scrollProgress={smoothProgress} />
           <Philosophy scrollProgress={smoothProgress} />
           <Work scrollProgress={smoothProgress} />
@@ -55,7 +58,7 @@ export default function Home() {
 
       <div
         ref={scrollRef}
-        className="relative z-20 h-[500vh] pointer-events-none"
+        className="relative z-20 h-[600vh] pointer-events-none"
       />
     </>
   );

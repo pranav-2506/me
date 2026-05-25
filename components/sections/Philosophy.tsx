@@ -17,13 +17,13 @@ const philosophies = [
 export default function Philosophy({ scrollProgress }: PhilosophyProps) {
   const containerOpacity = useTransform(
     scrollProgress,
-    [0.38, 0.42, 0.55, 0.57],
+    [0.51, 0.55, 0.63, 0.65],
     [0, 1, 1, 0]
   );
-  const containerY = useTransform(scrollProgress, [0.4, 0.57], [80, -80]);
+  const containerY = useTransform(scrollProgress, [0.53, 0.65], [80, -80]);
 
   // Counter-scroll animation for right side elements
-  const counterY = useTransform(scrollProgress, [0.4, 0.57], [-80, 80]);
+  const counterY = useTransform(scrollProgress, [0.53, 0.65], [-80, 80]);
 
   return (
     <motion.div
@@ -41,10 +41,10 @@ export default function Philosophy({ scrollProgress }: PhilosophyProps) {
               const itemOpacity = useTransform(
                 scrollProgress,
                 [
-                  0.40 + index * 0.032,
-                  0.42 + index * 0.032,
-                  0.52 + index * 0.01,
-                  0.55 + index * 0.01,
+                  0.53 + index * 0.025,
+                  0.55 + index * 0.025,
+                  0.62 + index * 0.008,
+                  0.64 + index * 0.008,
                 ],
                 [0, 1, 1, 0]
               );

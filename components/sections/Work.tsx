@@ -10,7 +10,7 @@ const experiences = [
   {
     name: "Hughes Network Systems",
     role: "Software Engineer Intern",
-    year: "2024",
+    year: "2025",
     description:
       "Worked on containerized 5G systems at scale. Focused on performance tuning, DPDK, SR-IOV, and debugging multi-node distributed environments under real-time constraints.",
     tech: ["5G", "DPDK", "SR-IOV", "Kubernetes", "C++"],
@@ -18,7 +18,7 @@ const experiences = [
   {
     name: "Terrapin Works (University of Maryland)",
     role: "Backend Engineer",
-    year: "2023",
+    year: "2025-2026",
     description:
       "Built backend systems for a platform serving 25+ campus labs. Worked with GraphQL, OpenSearch, AWS Step Functions, and distributed workflows.",
     tech: ["GraphQL", "OpenSearch", "AWS", "Node.js"],
@@ -47,49 +47,49 @@ const projects = [
 ];
 
 export default function Work({ scrollProgress }: WorkProps) {
-  // Header "Experience" phase: 0.58-0.62 (visible, then completely gone)
+  // Header "Experience" phase
   const headerOpacity = useTransform(
     scrollProgress,
-    [0.58, 0.60, 0.62, 0.635],
+    [0.65, 0.67, 0.684, 0.696],
     [0, 1, 1, 0]
   );
 
-  // Horizontal scroll experiences: 0.65-0.73 (decent scroll time)
+  // Horizontal scroll experiences
   const experiencesContainerOpacity = useTransform(
     scrollProgress,
-    [0.635, 0.65, 0.73, 0.745],
+    [0.696, 0.71, 0.776, 0.79],
     [0, 1, 1, 0]
   );
 
-  const experiencesX = useTransform(scrollProgress, [0.65, 0.73], ["0vw", "-100vw"]);
+  const experiencesX = useTransform(scrollProgress, [0.71, 0.776], ["0vw", "-100vw"]);
 
-  // Projects header phase: 0.75-0.79 (completely gone before first project)
+  // Projects header phase
   const projectsHeaderOpacity = useTransform(
     scrollProgress,
-    [0.75, 0.77, 0.79, 0.805],
+    [0.792, 0.809, 0.826, 0.838],
     [0, 1, 1, 0]
   );
 
-  // Horizontal scroll projects: 0.82-0.90 (decent scroll time)
+  // Horizontal scroll projects
   const projectsContainerOpacity = useTransform(
     scrollProgress,
-    [0.805, 0.82, 0.90, 0.915],
+    [0.838, 0.85, 0.917, 0.93],
     [0, 1, 1, 0]
   );
 
-  const projectsX = useTransform(scrollProgress, [0.82, 0.90], ["0vw", "-200vw"]);
+  const projectsX = useTransform(scrollProgress, [0.85, 0.917], ["0vw", "-200vw"]);
 
   // Background color for projects section (dark)
   const projectsBgColor = useTransform(
     scrollProgress,
-    [0.78, 0.84],
+    [0.817, 0.867],
     ["rgb(20, 20, 20)", "rgb(5, 5, 5)"]
   );
 
   // Text color for projects heading (remains light)
   const projectsHeadingColor = useTransform(
     scrollProgress,
-    [0.78, 0.84],
+    [0.817, 0.867],
     ["rgb(234, 234, 234)", "rgb(234, 234, 234)"]
   );
 

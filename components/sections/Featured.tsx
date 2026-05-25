@@ -9,32 +9,32 @@ interface FeaturedProps {
 export default function Featured({ scrollProgress }: FeaturedProps) {
   const opacity = useTransform(
     scrollProgress,
-    [0.18, 0.25, 0.36, 0.39],
+    [0.30, 0.37, 0.48, 0.51],
     [0, 1, 1, 0]
   );
-  const y = useTransform(scrollProgress, [0.2, 0.39], [80, -80]);
+  const y = useTransform(scrollProgress, [0.32, 0.51], [80, -80]);
 
   const titleOpacity = useTransform(
     scrollProgress,
-    [0.2, 0.26, 0.36, 0.39],
+    [0.32, 0.38, 0.48, 0.51],
     [0, 1, 1, 0]
   );
 
   const subtitleOpacity = useTransform(
     scrollProgress,
-    [0.22, 0.28, 0.36, 0.39],
+    [0.34, 0.40, 0.48, 0.51],
     [0, 1, 1, 0]
   );
 
   const descOpacity = useTransform(
     scrollProgress,
-    [0.24, 0.3, 0.36, 0.39],
+    [0.36, 0.42, 0.48, 0.51],
     [0, 1, 1, 0]
   );
 
   const headerOpacity = useTransform(
     scrollProgress,
-    [0.18, 0.22, 0.36, 0.39],
+    [0.30, 0.34, 0.48, 0.51],
     [0, 1, 1, 0]
   );
 

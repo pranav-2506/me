@@ -9,10 +9,10 @@ interface ContactProps {
 export default function Contact({ scrollProgress }: ContactProps) {
   const opacity = useTransform(
     scrollProgress,
-    [0.925, 0.96, 0.99, 1],
+    [0.94, 0.97, 0.99, 1],
     [0, 1, 1, 1]
   );
-  const y = useTransform(scrollProgress, [0.925, 1], [80, -40]);
+  const y = useTransform(scrollProgress, [0.94, 1], [80, -40]);
 
   return (
     <motion.div
