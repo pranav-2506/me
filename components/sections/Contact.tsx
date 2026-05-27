@@ -14,10 +14,16 @@ export default function Contact({ scrollProgress }: ContactProps) {
   );
   const y = useTransform(scrollProgress, [0.94, 1], [80, -40]);
 
+  const pointerEvents = useTransform(
+    scrollProgress,
+    [0, 0.92, 0.96, 1],
+    ['none', 'none', 'auto', 'auto']
+  );
+
   return (
     <motion.div
-      style={{ opacity, y }}
-      className="absolute inset-0 flex items-center justify-center px-4 pointer-events-auto"
+      style={{ opacity, y, pointerEvents }}
+      className="absolute inset-0 flex items-center justify-center px-4"
     >
       {/* Ambient glow */}
       <motion.div
@@ -39,10 +45,10 @@ export default function Contact({ scrollProgress }: ContactProps) {
         </p>
 
         {/* Apple-style minimal links */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-4 pointer-events-auto text-base">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-4 text-base">
           <a
             href="mailto:pranav.umd22@gmail.com"
-            className="group flex items-center gap-2 text-[#eaeaea] hover:text-cyan-400 transition-colors duration-300 pointer-events-auto cursor-pointer"
+            className="group flex items-center gap-2 text-[#eaeaea] hover:text-cyan-400 transition-colors duration-300 cursor-pointer"
           >
             <span>Email</span>
             <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">→</span>
@@ -54,7 +60,7 @@ export default function Contact({ scrollProgress }: ContactProps) {
             href="https://github.com/pranav-2506"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 text-[#eaeaea] hover:text-cyan-400 transition-colors duration-300 pointer-events-auto cursor-pointer"
+            className="group flex items-center gap-2 text-[#eaeaea] hover:text-cyan-400 transition-colors duration-300 cursor-pointer"
           >
             <span>GitHub</span>
             <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">↗</span>
@@ -66,7 +72,7 @@ export default function Contact({ scrollProgress }: ContactProps) {
             href="https://www.linkedin.com/in/pranav-chandar-sridar-190938291/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 text-[#eaeaea] hover:text-cyan-400 transition-colors duration-300 pointer-events-auto cursor-pointer"
+            className="group flex items-center gap-2 text-[#eaeaea] hover:text-cyan-400 transition-colors duration-300 cursor-pointer"
           >
             <span>LinkedIn</span>
             <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">↗</span>
@@ -78,7 +84,7 @@ export default function Contact({ scrollProgress }: ContactProps) {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 text-[#eaeaea] hover:text-cyan-400 transition-colors duration-300 pointer-events-auto cursor-pointer"
+            className="group flex items-center gap-2 text-[#eaeaea] hover:text-cyan-400 transition-colors duration-300 cursor-pointer"
           >
             <span>Resume</span>
             <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">↗</span>

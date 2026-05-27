@@ -14,6 +14,12 @@ export default function Featured({ scrollProgress }: FeaturedProps) {
   );
   const y = useTransform(scrollProgress, [0.32, 0.51], [80, -80]);
 
+  const pointerEvents = useTransform(
+    scrollProgress,
+    [0.25, 0.30, 0.51, 0.90],
+    ['none', 'auto', 'auto', 'none']
+  );
+
   const titleOpacity = useTransform(
     scrollProgress,
     [0.32, 0.38, 0.48, 0.51],
@@ -40,7 +46,7 @@ export default function Featured({ scrollProgress }: FeaturedProps) {
 
   return (
     <motion.div
-      style={{ opacity, y }}
+      style={{ opacity, y, pointerEvents }}
       className="absolute inset-0 flex items-center justify-center px-4"
     >
       <div className="max-w-2xl text-center relative">
@@ -89,10 +95,10 @@ export default function Featured({ scrollProgress }: FeaturedProps) {
           style={{ opacity: descOpacity }}
         >
           <a
-            href="https://loom.com/talktrack-demo"
+            href="https://drive.google.com/file/d/1o7rfMbFbM50MfcFo1hqGbuE8pSLt1U6N/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 rounded-lg border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300 font-medium text-sm pointer-events-auto"
+            className="inline-block px-6 py-3 rounded-lg border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300 font-medium text-sm"
           >
             Watch Demo →
           </a>
